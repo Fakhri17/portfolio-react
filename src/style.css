@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neo-bg: #f4f0ea;
+  --color-neo-yellow: #ffd900;
+  --color-neo-pink: #ff90e8;
+  --color-neo-blue: #8be9fd;
+  --color-neo-green: #b2ff90;
+  --color-neo-purple: #cba6f7;
+  --color-neo-orange: #ffb86c;
+}
+
+:root {
+  background-color: var(--color-neo-bg);
+  color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-neo-yellow);
+  color: #000;
+}
+
+/* Neobrutalism Core Classes */
+.neo-border {
+  border: 3px solid #000;
+}
+
+.neo-shadow {
+  box-shadow: 6px 6px 0px 0px #000;
+}
+
+.neo-btn {
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0px 0px #000;
+  transition: all 0.15s ease-out;
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px 0px #000;
+}
+
+.neo-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0px 0px #000;
+}
+
+.neo-card {
+  border: 3px solid #000;
+  box-shadow: 8px 8px 0px 0px #000;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.neo-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 11px 11px 0px 0px #000;
+}
+
+.neo-badge {
+  border: 2px solid #000;
+  box-shadow: 3px 3px 0px 0px #000;
+  font-weight: 700;
+}
