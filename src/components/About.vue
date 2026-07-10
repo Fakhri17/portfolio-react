@@ -11,7 +11,7 @@
           About Me
         </h2>
         <p class="text-xl md:text-2xl font-bold bg-white px-4 py-2 border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1 max-w-2xl text-center md:text-left">
-          Computer Science student with a passion for web development.
+         Informatic student with a passion for web development.
         </p>
       </div>
 
@@ -45,11 +45,11 @@
             </div>
 
             <h3 class="text-2xl md:text-3xl font-black mb-6 mt-2 leading-tight uppercase">
-              Frontend Developer & <br /> Web Development Specialist
+              Web Developer
             </h3>
 
             <p class="text-lg font-bold mb-6 border-b-4 border-black pb-6 border-dotted">
-              I am a Computer Science student at Telkom University Surabaya with a strong interest in web development and networking.
+              I am an Informatic student at Telkom University Surabaya with a strong interest in web development and networking.
             </p>
 
             <p class="text-lg font-bold text-gray-800 leading-relaxed bg-[#f4f0ea] p-4 border-2 border-black border-dashed">

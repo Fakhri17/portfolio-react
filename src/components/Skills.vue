@@ -6,7 +6,7 @@ const skillCategories = [
     title: "Frontend Development",
     icon: Layout,
     color: "bg-[#b2ff90]",
-    skills: ["HTML/CSS/JS", "AlpineJS", "Bootstrap CSS", "Tailwind CSS", "VueJS", "React", "Next.js"],
+    skills: ["HTML/CSS/JS", "AlpineJS", "Bootstrap CSS", "Tailwind CSS", "VueJS"],
   },
   {
     title: "Backend Development",

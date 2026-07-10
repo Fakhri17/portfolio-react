@@ -1,5 +1,5 @@
 <script setup>
-import { Github, Linkedin, Mail } from 'lucide-vue-next';
+import { Download, Github, Linkedin, Mail } from 'lucide-vue-next';
 </script>
 
 <template>
@@ -22,11 +22,21 @@ import { Github, Linkedin, Mail } from 'lucide-vue-next';
 
       <div class="mb-12 inline-block">
         <h2 class="text-lg md:text-2xl lg:text-3xl font-bold bg-[#8be9fd] px-6 py-3 border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] inline-block rotate-[1deg] hover:-rotate-1 transition-transform duration-200 cursor-default">
-          Frontend Developer & Web Specialist
+          Web Developer
         </h2>
       </div>
 
       <div class="flex flex-wrap justify-center gap-6 mt-4">
+        <a
+          href="https://drive.google.com/file/d/1iopdwz6af0C4zV5T1FiRreWWqZ2-Jsqq/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-[#ffd900] px-6 py-4 neo-btn flex items-center gap-2 font-black uppercase tracking-wide hover:bg-[#b2ff90]"
+          aria-label="Download Resume"
+        >
+          <Download class="w-5 h-5 text-black group-hover:scale-110 transition-transform" stroke-width="2.5" />
+          <span class="text-black">Resume</span>
+        </a>
         <a
           href="https://github.com/fakhri17"
           target="_blank"
