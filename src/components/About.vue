@@ -6,14 +6,14 @@ import { ArrowUpRight, BookOpen, GraduationCap, MoveUpRight, Trophy } from 'luci
   <section id="about" class="section about-section">
     <div class="container about-grid">
       <div class="about-intro">
-        <span class="section-kicker">A little context</span>
-        <h2>Good software is<br /><span class="muted-text">quietly excellent.</span></h2>
+        <span class="section-kicker">Background</span>
+        <h2>About me</h2>
       </div>
       <div class="about-copy">
-        <p class="about-lead">I’m Fakhri, an Informatics graduate from Telkom University with several years of experience in backend and full-stack web development.</p>
-        <p>I care about the details between a good idea and a great product. I work across the stack, with a particular love for backend systems that are clear, resilient, and built to evolve. My approach is equal parts technical rigor and curiosity: understand the problem deeply, then make the solution feel simple.</p>
-        <p>My work spans healthcare platforms, corporate websites, student services, and internal business applications. I enjoy continuous learning and working with teams to turn real operational needs into effective, reliable web solutions.</p>
-        <a href="https://github.com/fakhri17" target="_blank" rel="noopener noreferrer" class="text-link">More about my work <ArrowUpRight :size="16" /></a>
+        <p class="about-lead">I graduated in <strong>Informatics from Telkom University</strong> in July 2026.</p>
+        <p>I’ve worked on hospital systems, medical learning platforms, company websites, and student services. My work covers backend and frontend features, databases, API integrations, debugging, and maintenance.</p>
+        <p>At PikarLabs and Telkom University, I worked with developers and staff to understand their requirements and build the applications they needed.</p>
+        <a href="https://github.com/fakhri17" target="_blank" rel="noopener noreferrer" class="text-link">View my GitHub <ArrowUpRight :size="16" /></a>
       </div>
       <div class="about-background">
         <article class="background-card">
@@ -26,8 +26,8 @@ import { ArrowUpRight, BookOpen, GraduationCap, MoveUpRight, Trophy } from 'luci
         <article class="background-card">
           <div class="background-card-heading"><BookOpen :size="21" /><h3>Academic &amp; Research</h3></div>
           <h4>Research &amp; community service</h4>
-          <p>Contributed to lecturer-led research and community service (Pengabdian kepada Masyarakat) projects by building websites for partner organizations and communities.</p>
-          <p>Collaborated with lecturers and fellow students on requirements, design, development, maintenance, testing, and improvements.</p>
+          <p>Built websites for partner organizations and communities through lecturer-led research and community service (Pengabdian kepada Masyarakat) projects.</p>
+          <p>Worked with lecturers and fellow students on requirements, design, development, testing, improvements, and maintenance.</p>
         </article>
         <article class="background-card">
           <div class="background-card-heading"><Trophy :size="21" /><h3>Achievements</h3></div>
@@ -37,7 +37,7 @@ import { ArrowUpRight, BookOpen, GraduationCap, MoveUpRight, Trophy } from 'luci
           </ul>
         </article>
       </div>
-      <div class="about-note"><MoveUpRight :size="21" /><span>Currently exploring better ways to make complex systems feel effortless.</span></div>
+      <div class="about-note"><MoveUpRight :size="21" /><span>I continue learning about backend development, Linux servers, and web deployment.</span></div>
     </div>
   </section>
 </template>
