@@ -2,12 +2,32 @@
 import { ArrowUpRight } from 'lucide-vue-next'
 
 const roles = [
-  { period: 'Januari 2023 — Sampai Saat Ini', company: 'Akademik Telkom University Surabaya', type: 'Part Time', role: 'Student Staff Front End and DevOps', detail: 'Build a profile website for the academic department of Telkom University Surabaya and a ticketing app for the Student Service Center (SSC).', current: true },
-  { period: 'Januari 2020 — Sampai Saat Ini', company: 'Pikarlabs.com', type: 'Part Time', role: 'Web Developer', detail: 'Build Website from client using Craft CMS and Laravel Filament.', current: true },
-  { period: 'Juni 2025 — Agustus 2025', company: 'PT Aptikma Teknologi Indonesia', type: 'Magang', role: 'Web Developer', detail: 'Membantu pembuatan project website di Aptikma dengan tech stack Laravel dan Jquery.' },
-  { period: 'Januari 2023 — Maret 2023', company: 'Tribes Agency', type: 'Project Base', role: 'Frontend Developer', detail: 'Build Website Tribes Agency using Tailwind CSS and Craft CMS.' },
-  { period: 'Januari 2023 — Januari 2024', company: 'GDSC Telkom University Surabaya', type: 'Organisasi', role: 'Tech and Curriculum of Website Development', detail: 'Collaborating with the team in the planning and execution of sharing session activities. Developing materials in the field of web development. Serving as a mentor and tech curriculum aspects in the realm of web development.' },
-  { period: 'November 2022 — November 2023', company: 'Coder Telkom University Surabaya', type: 'Organisasi', role: 'Anggota', detail: 'Menjadi anggota UKMK Coder pada divisi Web Developer. Serta membuat website untuk UKMK Coder.' },
+  {
+    period: 'Apr 2020 — Jul 2026', company: 'PikarLabs', type: 'Part-time', role: 'Web Developer',
+    detail: 'Developed and maintained client and internal web applications using Craft CMS, Laravel, and Filament, working across backend and frontend features, database integration, debugging, and maintenance.',
+    highlights: [
+      'Contributed to SIMRS, a Hospital Information System supporting healthcare operations and administration.',
+      'Developed the Petrokimia company profile website and Meducine, a platform for medical webinars and online classes for doctors.',
+      'Built internal applications, including external API integrations, and collaborated with the team to turn client requirements into practical web solutions.',
+    ],
+  },
+  {
+    period: 'Apr 2023 — Jul 2026', company: 'Telkom University', type: 'Part-time', role: 'Student Staff',
+    detail: 'Developed web applications and internal tools to support academic and administrative services, collaborating with academic staff to understand operational needs.',
+    highlights: [
+      'Developed Student Service Center (SSC), a ticketing and complaint management system for student service requests and academic inquiries.',
+      'Built tools for academic document management and contributed to a student queuing application and the academic department profile website.',
+      'Helped manage and schedule lecturer educational video recording sessions to support learning content production.',
+    ],
+  },
+  {
+    period: 'Jun 2025 — Aug 2025', company: 'PT Aptikma Teknologi Indonesia', type: 'Internship', role: 'Web Developer',
+    detail: 'Developed web applications using Laravel and jQuery, implementing backend logic, relational database integration, and features based on user requirements and project specifications.',
+    highlights: ['Collaborated with the development team on testing, debugging, and improving application functionality throughout the project.'],
+  },
+  { period: 'Jan 2023 — Mar 2023', company: 'Tribes Agency', type: 'Project-based', role: 'Frontend Developer', detail: 'Built the Tribes Agency website using Tailwind CSS and Craft CMS.' },
+  { period: 'Jan 2023 — Jan 2024', company: 'GDSC Telkom University Surabaya', type: 'Organization', role: 'Tech and Curriculum of Website Development', detail: 'Collaborated on sharing sessions, developed web development learning materials, and mentored students in web development.' },
+  { period: 'Nov 2022 — Nov 2023', company: 'Coder Telkom University Surabaya', type: 'Organization', role: 'Web Development Member', detail: 'Participated in the Web Developer division of UKMK Coder and helped build the community website.' },
 ]
 </script>
 
@@ -23,6 +43,9 @@ const roles = [
             <div class="timeline-company">{{ item.company }} <span class="experience-type">• {{ item.type }}</span> <span v-if="item.current" class="current-label">Current</span></div>
             <h3>{{ item.role }}</h3>
             <p>{{ item.detail }}</p>
+            <ul v-if="item.highlights" class="timeline-highlights">
+              <li v-for="highlight in item.highlights" :key="highlight">{{ highlight }}</li>
+            </ul>
           </div>
           <ArrowUpRight :size="18" class="timeline-arrow" />
         </article>
