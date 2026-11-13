@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fakhri-17.my.id/sitemap.xml

@@ -24,7 +24,7 @@ const others = [
       <div v-reveal class="section-heading split-heading"><h2>Selected work</h2><p>Client, institutional, and community projects I built or contributed to, most of them live in production.</p></div>
       <div class="projects-grid">
         <article v-for="(project, index) in featured" :key="project.title" v-reveal="(index % 2) * 90" class="project-card">
-          <a class="project-visual" :href="project.url" target="_blank" rel="noopener noreferrer" :aria-label="'Open ' + project.title"><img :src="project.image" :alt="project.title + ' screenshot'" loading="lazy" /></a>
+          <a class="project-visual" :href="project.url" target="_blank" rel="noopener noreferrer" :aria-label="'Open ' + project.title"><img :src="project.image" :alt="project.title + ' screenshot'" loading="lazy" decoding="async" /></a>
           <div class="project-info">
             <div class="project-meta"><span>{{ project.type }}</span><a :href="project.url" target="_blank" rel="noopener noreferrer">View live <ArrowUpRight :size="15" /></a></div>
             <h3>{{ project.title }}</h3>
