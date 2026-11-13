@@ -1,20 +1,11 @@
 <script setup>
-import { ArrowUpRight, BookOpen, GraduationCap, MoveUpRight, Trophy } from 'lucide-vue-next'
+import { BookOpen, GraduationCap, Trophy, Users } from 'lucide-vue-next'
 </script>
 
 <template>
-  <section id="about" class="section about-section">
-    <div class="container about-grid">
-      <div class="about-intro">
-        <span class="section-kicker">Background</span>
-        <h2>About me</h2>
-      </div>
-      <div class="about-copy">
-        <p class="about-lead">I graduated in <strong>Informatics from Telkom University</strong> in July 2026.</p>
-        <p>I’ve worked on hospital systems, medical learning platforms, company websites, and student services. My work covers backend and frontend features, databases, API integrations, debugging, and maintenance.</p>
-        <p>At PikarLabs and Telkom University, I worked with developers and staff to understand their requirements and build the applications they needed.</p>
-        <a href="https://github.com/fakhri17" target="_blank" rel="noopener noreferrer" class="text-link">View my GitHub <ArrowUpRight :size="16" /></a>
-      </div>
+  <section id="background" class="section about-section">
+    <div class="container">
+      <div class="section-heading"><span class="section-kicker">Education &amp; activities</span><h2>Background</h2></div>
       <div class="about-background">
         <article class="background-card">
           <div class="background-card-heading"><GraduationCap :size="21" /><h3>Education</h3></div>
@@ -26,8 +17,8 @@ import { ArrowUpRight, BookOpen, GraduationCap, MoveUpRight, Trophy } from 'luci
         <article class="background-card">
           <div class="background-card-heading"><BookOpen :size="21" /><h3>Academic &amp; Research</h3></div>
           <h4>Research &amp; community service</h4>
-          <p>Built websites for partner organizations and communities through lecturer-led research and community service (Pengabdian kepada Masyarakat) projects.</p>
-          <p>Worked with lecturers and fellow students on requirements, design, development, testing, improvements, and maintenance.</p>
+          <p>Developed web applications for lecturer-led research projects, contributing to design, implementation, and testing.</p>
+          <p>Built websites for community service (Pengabdian kepada Masyarakat) projects with lecturers and fellow students, from requirements through testing.</p>
         </article>
         <article class="background-card">
           <div class="background-card-heading"><Trophy :size="21" /><h3>Achievements</h3></div>
@@ -36,8 +27,14 @@ import { ArrowUpRight, BookOpen, GraduationCap, MoveUpRight, Trophy } from 'luci
             <li><span class="background-period">2023</span><h4>Finalist — Pekan Ilmiah Mahasiswa</h4><p>Institut Teknologi Telkom Surabaya.</p></li>
           </ul>
         </article>
+        <article class="background-card">
+          <div class="background-card-heading"><Users :size="21" /><h3>Organizations</h3></div>
+          <ul class="achievement-list">
+            <li><span class="background-period">Jan 2023 — Jan 2024</span><h4>Web Development Mentor</h4><p>GDSC Telkom University Surabaya. Delivered web development learning sessions covering HTML, CSS, JavaScript, and Laravel.</p></li>
+            <li><span class="background-period">Nov 2022 — Nov 2023</span><h4>Member &amp; Speaker</h4><p>UKM CODER Telkom University Surabaya. Speaker at Hall of Fame: CODER Exhibition and Welcome Party.</p></li>
+          </ul>
+        </article>
       </div>
-      <div class="about-note"><MoveUpRight :size="21" /><span>I continue learning about backend development, Linux servers, and web deployment.</span></div>
     </div>
   </section>
 </template>

@@ -6,9 +6,9 @@ import { ArrowDown, ArrowUpRight } from 'lucide-vue-next'
   <section id="home" class="hero-section">
     <div class="container hero-grid">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> Available for select projects</div>
+        <div class="eyebrow"><span class="status-dot"></span> Open to full-time roles</div>
         <h1>Fakhri<br /><span class="hero-surname">Alauddin.</span></h1>
-        <p class="hero-description">I’m a web developer focused on <strong>backend and full-stack development</strong>, mainly using Laravel, Craft CMS, and Vue.js.</p>
+        <p class="hero-description">I’m a web developer with <strong>6 years of project experience</strong>, including 5+ years with Craft CMS, alongside Laravel and Vue.js. I’ve delivered 6+ production systems, including a student ticketing system used by 2,000+ students.</p>
         <div class="hero-actions"><a href="#projects" class="button button-primary">View projects <ArrowUpRight :size="17" /></a><a href="#contact" class="button button-ghost">Contact me <ArrowUpRight :size="17" /></a></div>
         <div class="scroll-cue"><ArrowDown :size="15" /> Scroll to explore</div>
       </div>
@@ -28,6 +28,6 @@ import { ArrowDown, ArrowUpRight } from 'lucide-vue-next'
         </div>
       </div>
     </div>
-    <div class="hero-footer container"><span>01 / 06</span><div class="hero-rule"></div><span>Independent developer · Based in Indonesia</span></div>
+    <div class="hero-footer container"><span>01 / 06</span><div class="hero-rule"></div><span>Web developer · Surabaya, Indonesia</span></div>
   </section>
 </template>

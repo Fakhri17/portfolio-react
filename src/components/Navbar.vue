@@ -6,9 +6,9 @@ const isOpen = ref(false)
 const isScrolled = ref(false)
 const isDark = ref(document.documentElement.classList.contains('dark'))
 const links = [
-  { label: 'About', href: '#about' },
   { label: 'Work', href: '#projects' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Background', href: '#background' },
   { label: 'Contact', href: '#contact' },
 ]
 

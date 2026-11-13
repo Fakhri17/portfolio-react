@@ -3,43 +3,40 @@ import { ArrowUpRight } from 'lucide-vue-next'
 
 const roles = [
   {
-    period: 'Apr 2020 — Jul 2026', company: 'PikarLabs', type: 'Part-time', role: 'Web Developer',
-    detail: 'Built and maintained client and internal web applications using Craft CMS, Laravel, and Filament.',
+    period: 'Apr 2020 — Jul 2026', company: 'PikarLabs', type: 'Intern, then part-time', role: 'Web Developer',
+    detail: 'Built and maintained 5+ web applications for clients and internal needs using Laravel, Vue.js, Tailwind CSS, MySQL, and PostgreSQL, covering backend, frontend, and database.',
     highlights: [
-      { label: 'SIMRS', text: 'Contributed to a hospital information system for healthcare operations and administration.' },
-      { label: 'Petrokimia & Meducine', text: 'Developed a company profile website and a platform for medical webinars and online classes for doctors.' },
-      { label: 'Development & maintenance', text: 'Implemented backend and frontend features, database connections, and external API integrations; handled debugging and maintenance.' },
-      { label: 'Client requirements', text: 'Worked with the team to translate client needs and business processes into web applications.' },
+      { label: 'SIMRS', text: 'Built medicine management and patient modules for a Hospital Information System, using the Ministry of Health’s KFA (Kamus Farmasi dan Alat Kesehatan) data.' },
+      { label: 'Meducine', text: 'Contributed to an online medical education platform (webinars, courses, memberships) for doctors, built on Craft CMS: webinar listing and detail pages, speaker pages, and a REST API for the webinar list.' },
+      { label: 'Petrokimia', text: 'Developed the frontend and Craft CMS backend for the Petrokimia corporate website.' },
+      { label: 'Monitoring & analytics', text: 'Integrated web applications with monitoring and analytics tools.' },
     ],
   },
   {
     period: 'Apr 2023 — Jul 2026', company: 'Telkom University', type: 'Part-time', role: 'Student Staff',
     detail: 'Built web applications and internal tools for academic and administrative services.',
     highlights: [
-      { label: 'Student Service Center', text: 'Developed a ticketing and complaint management system for student requests and academic inquiries.' },
-      { label: 'Academic tools', text: 'Built document management tools and contributed to a student queuing app and the academic department website.' },
-      { label: 'Learning content', text: 'Helped manage and schedule lecturers’ educational video recording sessions.' },
-      { label: 'Staff collaboration', text: 'Worked with academic staff and internal teams to identify operational needs and develop supporting applications.' },
+      { label: 'Student Service Center', text: 'Built a ticketing and complaint management system for student service requests and academic inquiries, used by 2,000+ students (Laravel, Vue.js, Tailwind CSS, MySQL, MongoDB).' },
+      { label: 'Academic tools', text: 'Built internal tools to streamline academic scheduling and administrative workflows for academic staff, replacing manual processes.' },
+      { label: 'Student queuing', text: 'Contributed to a student queuing application for managing student services.' },
+      { label: 'Learning content', text: 'Assisted in scheduling lecturer video recording sessions to keep learning content production running smoothly.' },
     ],
   },
   {
     period: 'Jun 2025 — Aug 2025', company: 'PT Aptikma Teknologi Indonesia', type: 'Internship', role: 'Web Developer',
-    detail: 'Developed web applications with Laravel and jQuery during a web development internship.',
+    detail: 'Worked on the Laravel backends of AI-based products during a web development internship.',
     highlights: [
-      { label: 'Backend features', text: 'Implemented application logic, relational database integration, and features based on user requirements and project specifications.' },
-      { label: 'Testing & debugging', text: 'Worked with the development team to test, debug, and improve application functionality throughout the project.' },
+      { label: 'Backend features', text: 'Implemented and fixed backend features for an AI-based Document Recognition System (OCR) and a CCTV-based People Counting System, including application logic and relational database integration.' },
+      { label: 'Testing & debugging', text: 'Customized features based on user requirements and supported testing and debugging across the development team.' },
     ],
   },
-  { period: 'Jan 2023 — Mar 2023', company: 'Tribes Agency', type: 'Project-based', role: 'Frontend Developer', detail: 'Worked on the Tribes Agency website.', highlights: [{ label: 'Frontend', text: 'Built the website using Tailwind CSS and Craft CMS.' }] },
-  { period: 'Jan 2023 — Jan 2024', company: 'GDSC Telkom University Surabaya', type: 'Organization', role: 'Tech and Curriculum of Website Development', detail: 'Supported web development learning activities.', highlights: [{ label: 'Curriculum & mentoring', text: 'Planned sharing sessions with the team, developed learning materials, and mentored students in web development.' }] },
-  { period: 'Nov 2022 — Nov 2023', company: 'Coder Telkom University Surabaya', type: 'Organization', role: 'Web Development Member', detail: 'Joined the Web Developer division of UKMK Coder.', highlights: [{ label: 'Community website', text: 'Helped build the UKMK Coder website.' }] },
 ]
 </script>
 
 <template>
   <section id="experience" class="section experience-section">
     <div class="container">
-      <div class="section-heading"><span class="section-kicker">Work &amp; organizations</span><h2>Experience</h2></div>
+      <div class="section-heading"><span class="section-kicker">Roles &amp; internships</span><h2>Work experience</h2></div>
       <div class="timeline">
         <article v-for="item in roles" :key="`${item.company}-${item.period}`" class="timeline-item">
           <div class="timeline-marker" :class="{ current: item.current }"></div>
@@ -55,7 +52,7 @@ const roles = [
           <ArrowUpRight :size="18" class="timeline-arrow" />
         </article>
       </div>
-      <a href="#contact" class="text-link">Have a project in mind? <ArrowUpRight :size="16" /></a>
+      <a href="#contact" class="text-link">Hiring a web developer? Get in touch <ArrowUpRight :size="16" /></a>
     </div>
   </section>
 </template>
