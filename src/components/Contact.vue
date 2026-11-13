@@ -1,8 +1,7 @@
 <script setup>
-import { ArrowUpRight, Download, Github, Globe2, Linkedin, Mail, Phone } from 'lucide-vue-next'
+import { ArrowUpRight, Download, Github, Globe2, Linkedin, Mail } from 'lucide-vue-next'
 const contacts = [
   { label: 'Email', value: 'fakhricoffe@gmail.com', href: 'mailto:fakhricoffe@gmail.com', icon: Mail },
-  { label: 'Phone', value: '+62 897-0632-441', href: 'tel:+628970632441', icon: Phone },
   { label: 'Website', value: 'fakhri-17.my.id', href: 'https://fakhri-17.my.id', icon: Globe2 },
   { label: 'GitHub', value: 'github.com/fakhri17', href: 'https://github.com/fakhri17', icon: Github },
   { label: 'LinkedIn', value: 'in/fakhri-alauddin', href: 'https://www.linkedin.com/in/fakhri-alauddin/', icon: Linkedin },
