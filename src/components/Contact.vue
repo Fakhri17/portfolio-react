@@ -11,12 +11,11 @@ const contacts = [
 <template>
   <section id="contact" class="contact-section">
     <div class="container contact-inner">
-      <div class="contact-heading">
-        <span class="section-kicker">Get in touch</span>
+      <div v-reveal class="contact-heading">
         <h2>Contact</h2>
-        <p>I’m open to full-time web developer roles. Email me or use one of the links below.</p>
+        <p>I’m open to full-time full-stack developer roles. Email me or use one of the links below.</p>
       </div>
-      <div class="contact-links">
+      <div v-reveal="90" class="contact-links">
         <a v-for="contact in contacts" :key="contact.label" :href="contact.href" target="_blank" rel="noopener noreferrer" class="contact-link">
           <span class="contact-icon"><component :is="contact.icon" :size="18" /></span>
           <span><small>{{ contact.label }}</small><strong>{{ contact.value }}</strong></span>
@@ -25,7 +24,6 @@ const contacts = [
       </div>
       <div class="contact-bottom">
         <a href="/resume-fakhri-alauddin.pdf" download="Resume - CV Fakhri Alauddin.pdf" class="button button-primary"><Download :size="16" /> Download CV</a>
-        <span>Usually replies within 1–2 business days.</span>
       </div>
     </div>
   </section>

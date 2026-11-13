@@ -1,1 +1,1 @@
-<template><footer class="footer"><div class="container footer-inner"><span>© {{ new Date().getFullYear() }} Fakhri Alauddin</span><span>Built with care & a little caffeine</span><a href="#home">Back to top ↑</a></div></footer></template>
+<template><footer class="footer"><div class="container footer-inner"><span>© {{ new Date().getFullYear() }} Fakhri Alauddin</span><span>Built with Vue.js and Tailwind CSS</span><a href="#home">Back to top ↑</a></div></footer></template>

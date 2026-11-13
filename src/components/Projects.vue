@@ -1,25 +1,50 @@
 <script setup>
-import { ArrowUpRight, ExternalLink } from 'lucide-vue-next'
-const projects = [
-  { number: '01', title: 'Student Service Center', type: 'Digital service platform', description: 'A ticketing and complaint management system for student service requests and academic inquiries, used by 2,000+ students.', image: '/ssc.png', tags: ['Vue.js', 'Laravel', 'MongoDB'], url: 'https://ssc.telu-sby.id/' },
-  { number: '02', title: 'Meducine', type: 'Healthcare & membership', description: 'An online medical education platform for doctors. I worked on the webinar listing and detail pages, speaker pages, and a REST API.', image: '/meducine.png', tags: ['Craft CMS', 'PHP', 'Alpine.js'], url: 'https://meducine.id/' },
-  { number: '03', title: 'Petrokimia Gresik', type: 'Corporate platform', description: 'The corporate website of Petrokimia Gresik. I developed the frontend and the Craft CMS backend.', image: '/petro.png', tags: ['Craft CMS', 'PHP', 'CMS architecture'], url: 'https://petrokimia-gresik.com/' },
-  { number: '04', title: 'Coder Web Profile', type: 'Community platform', description: 'A clear, energetic web profile for a student developer community.', image: '/coder-web.png', tags: ['Laravel', 'Livewire', 'MySQL'], url: 'https://www.coder-telkomsby.com/' },
-  { number: '05', title: 'Mihwan.id', type: 'Personal publishing', description: 'A content-led blog experience designed around readable, thoughtful publishing.', image: '/mihwan.png', tags: ['Craft CMS', 'PHP', 'Alpine.js'], url: 'https://mihwan.id' },
-  { number: '06', title: 'SIMRS Multimedika', type: 'Healthcare operations', description: 'A hospital information system. I built the medicine management and patient modules using the Ministry of Health’s KFA data.', image: '/simrs.png', tags: ['Laravel', 'Filament', 'MySQL'], url: 'https://dokteremr.com/' },
-  { number: '07', title: 'Erde Jilbab', type: 'Commerce experience', description: 'A focused ecommerce experience for browsing and selling modest fashion.', image: '/erdejilbab.png', tags: ['Laravel', 'PHP', 'Tailwind CSS'], url: '#' },
-  { number: '08', title: 'Islamic Website', type: 'Information platform', description: 'A simple, accessible place to read the Quran and find prayer schedules.', image: '/islamic-web.png', tags: ['Alpine.js', 'Bootstrap CSS'], url: 'https://islamic-web-telkomsby.netlify.app' },
-  { number: '09', title: 'Bisnis Digital', type: 'Education platform', description: 'A study program website that helps prospective students find their path.', image: '/db.png', tags: ['WordPress', 'PHP'], url: 'https://bdb-sby.telkomuniversity.ac.id/' },
+import { ArrowUpRight } from 'lucide-vue-next'
+
+const featured = [
+  { title: 'Student Service Center', type: 'Telkom University Surabaya', description: 'A ticketing and complaint management system for student service requests and academic inquiries, used by 2,000+ students.', image: '/ssc.png', tags: ['Laravel', 'Vue.js', 'MongoDB'], url: 'https://ssc.telu-sby.id/' },
+  { title: 'Meducine', type: 'Medical education platform', description: 'An online medical education platform for doctors. I worked on the webinar listing and detail pages, speaker pages, and a REST API.', image: '/meducine.png', tags: ['Craft CMS', 'PHP', 'Alpine.js'], url: 'https://meducine.id/' },
+  { title: 'Petrokimia Gresik', type: 'Corporate website', description: 'The corporate website of Petrokimia Gresik. I developed the frontend and the Craft CMS backend.', image: '/petro.png', tags: ['Craft CMS', 'PHP'], url: 'https://petrokimia-gresik.com/' },
+  { title: 'SIMRS Multimedika', type: 'Hospital information system', description: 'I built the medicine management and patient modules using the Ministry of Health’s KFA data.', image: '/simrs.png', tags: ['Laravel', 'Filament', 'MySQL'], url: 'https://dokteremr.com/' },
+  { title: 'Bisnis Digital', type: 'Study program website', description: 'A study program website for prospective students.', image: '/db.png', tags: ['WordPress', 'PHP'], url: 'https://bdb-sby.telkomuniversity.ac.id/' },
+  { title: 'Mihwan.id', type: 'Personal blog', description: 'A personal blog built on Craft CMS.', image: '/mihwan.png', tags: ['Craft CMS', 'PHP', 'Alpine.js'], url: 'https://mihwan.id' },
 ]
-const sideProjects = [
-  { number: 'S1', title: 'PDFLab', type: 'PDF toolkit', description: 'A browser-based PDF toolkit with split, merge, organize, image, and watermark tools. Everything runs client-side, so files stay on the device.', image: '/pdflabs.png', tags: ['Vue.js'], url: 'https://pdflabs.my.id/' },
-]
-const groups = [
-  { label: '', items: projects },
-  { label: 'Side projects', items: sideProjects },
+const others = [
+  // Inactive, hidden for now:
+  // { title: 'Coder Web Profile', description: 'Profile website for the UKM CODER student developer community.', tags: ['Laravel', 'Livewire', 'MySQL'], url: 'https://www.coder-telkomsby.com/' },
+  // { title: 'Erde Jilbab', description: 'An ecommerce site for modest fashion.', tags: ['Laravel', 'Tailwind CSS'], url: '' },
+  { title: 'PDFLab', description: 'Side project. A PDF toolkit (split, merge, organize, watermark) that runs entirely in the browser.', tags: ['Vue.js'], url: 'https://pdflabs.my.id/' },
+  { title: 'Islamic Website', description: 'Quran reader and prayer schedules.', tags: ['Alpine.js', 'Bootstrap'], url: 'https://islamic-web-telkomsby.netlify.app' },
 ]
 </script>
 
 <template>
-  <section id="projects" class="section projects-section"><div class="container"><div class="section-heading split-heading"><div><span class="section-kicker">Selected work</span><h2>Built for impact.<br /><span class="muted-text">Designed to last.</span></h2></div><p>Client, institutional, and community projects I built or contributed to, most of them live in production.</p></div><template v-for="group in groups" :key="group.label"><p v-if="group.label" class="section-kicker projects-subheading">{{ group.label }}</p><div class="projects-grid"><article v-for="(project, index) in group.items" :key="project.title" class="project-card" :class="{ 'project-featured': index === 0 }"><div class="project-visual"><img :src="project.image" :alt="project.title + ' project preview'" loading="lazy" /><div class="visual-overlay"></div><a v-if="project.url !== '#'" class="preview-link" :href="project.url" target="_blank" rel="noopener noreferrer" :aria-label="'Open ' + project.title"><ExternalLink :size="17" /></a></div><div class="project-info"><div class="project-meta"><span>{{ project.number }} / {{ project.type }}</span><a v-if="project.url !== '#'" :href="project.url" target="_blank" rel="noopener noreferrer">View live <ArrowUpRight :size="15" /></a><span v-else class="offline-label">Private project</span></div><h3>{{ project.title }}</h3><p>{{ project.description }}</p><div class="tag-row"><span v-for="tag in project.tags" :key="tag">{{ tag }}</span></div></div></article></div></template><div class="section-end-link"><span>9 projects and 1 side project, one place.</span><a href="#contact">Let’s work together <ArrowUpRight :size="16" /></a></div></div></section>
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div v-reveal class="section-heading split-heading"><h2>Selected work</h2><p>Client, institutional, and community projects I built or contributed to, most of them live in production.</p></div>
+      <div class="projects-grid">
+        <article v-for="(project, index) in featured" :key="project.title" v-reveal="(index % 2) * 90" class="project-card">
+          <a class="project-visual" :href="project.url" target="_blank" rel="noopener noreferrer" :aria-label="'Open ' + project.title"><img :src="project.image" :alt="project.title + ' screenshot'" loading="lazy" /></a>
+          <div class="project-info">
+            <div class="project-meta"><span>{{ project.type }}</span><a :href="project.url" target="_blank" rel="noopener noreferrer">View live <ArrowUpRight :size="15" /></a></div>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <div class="tag-row"><span v-for="tag in project.tags" :key="tag">{{ tag }}</span></div>
+          </div>
+        </article>
+      </div>
+      <h3 v-reveal class="projects-subheading">More projects</h3>
+      <ul class="project-list">
+        <li v-for="(project, index) in others" :key="project.title" v-reveal="index * 40">
+          <component :is="project.url ? 'a' : 'div'" class="project-row" :href="project.url || undefined" :target="project.url ? '_blank' : undefined" :rel="project.url ? 'noopener noreferrer' : undefined">
+            <strong>{{ project.title }}</strong>
+            <span class="project-row-description">{{ project.description }}</span>
+            <span class="project-row-tags">{{ project.tags.join(' · ') }}</span>
+            <ArrowUpRight v-if="project.url" :size="16" />
+            <span v-else class="offline-label">Private</span>
+          </component>
+        </li>
+      </ul>
+    </div>
+  </section>
 </template>

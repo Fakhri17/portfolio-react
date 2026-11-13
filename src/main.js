@@ -12,4 +12,26 @@ try {
 document.documentElement.classList.add(theme)
 document.documentElement.style.colorScheme = theme
 
-createApp(App).mount('#app')
+const revealObserver = 'IntersectionObserver' in window
+  ? new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        entry.target.classList.add('is-visible')
+        revealObserver.unobserve(entry.target)
+      })
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' })
+  : null
+
+const reveal = {
+  mounted(el, binding) {
+    if (!revealObserver) return
+    el.classList.add('sr')
+    if (binding.value) el.style.transitionDelay = `${binding.value}ms`
+    revealObserver.observe(el)
+  },
+  unmounted(el) {
+    revealObserver?.unobserve(el)
+  },
+}
+
+createApp(App).directive('reveal', reveal).mount('#app')
