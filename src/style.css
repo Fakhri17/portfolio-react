@@ -140,6 +140,7 @@ svg { flex-shrink: 0; }
 .tag-row { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: auto; padding-top: 24px; }
 .tag-row span { color: var(--muted); font: 400 .875rem/1.7 var(--mono); }
 .tag-row span::before { content: '/'; margin-right: 6px; color: var(--accent); }
+.projects-subheading { margin: 64px 0 28px; }
 .section-end-link { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-top: 36px; color: var(--subtle); font: 400 .875rem/1.7 var(--mono); }
 .section-end-link a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--text); }
 .section-end-link a:hover { color: var(--accent); }
