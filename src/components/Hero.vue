@@ -49,7 +49,7 @@ onUnmounted(() => {
         <div class="eyebrow"><span class="status-dot"></span> Open to full-time roles · Surabaya, Indonesia</div>
         <h1>Fakhri<br /><span class="hero-surname">Alauddin</span></h1>
         <p class="hero-role">Full-Stack Developer</p>
-        <p class="hero-description">I build and maintain websites and web platforms with <strong>Craft CMS, Laravel, and Vue.js</strong>. My production work includes a medical webinar platform, a corporate website, a hospital information system, and a university ticketing system.</p>
+        <p class="hero-description">I build and maintain websites and web platforms with <strong>Craft CMS, Laravel, and Vue.js</strong>. My production work includes a medical webinar platform, a corporate website, and a student ticketing system used by 2,000+ students, and I contributed to a hospital information system (SIMRS).</p>
         <div class="hero-actions"><a href="#projects" class="button button-primary">View projects <ArrowUpRight :size="17" /></a><a href="#contact" class="button button-ghost">Contact me</a></div>
       </div>
       <div class="hero-showcase reveal reveal-delay">

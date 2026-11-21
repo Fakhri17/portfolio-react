@@ -6,6 +6,7 @@ const groups = [
   { label: 'Server & deployment', items: ['Linux', 'Nginx', 'Apache', 'Cloudflare'] },
   { label: 'Tools', items: ['Git', 'Postman', 'Figma', 'Visual Studio Code'] },
   { label: 'AI-assisted development', items: ['Claude Code', 'Gemini', 'Codex'] },
+  { label: 'Language', items: ['Indonesian (Advanced)', 'English (Fluent)'] },
 ]
 </script>
 

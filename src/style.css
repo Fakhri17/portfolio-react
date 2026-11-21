@@ -177,6 +177,7 @@ a.project-row:hover strong { color: var(--accent); }
 .education-gpa { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 24px; color: var(--muted); font-size: .875rem; }
 .education-gpa strong { padding-bottom: 2px; border-bottom: 2px solid var(--accent); color: var(--text); font: 500 1.125rem/1.7 var(--mono); }
 .achievement-list { display: grid; gap: 22px; margin: 0; padding: 0; list-style: none; }
+.achievement-list h4:first-child { margin-top: 0; }
 .contact-section { position: relative; padding: 108px 0 96px; }
 .contact-inner { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 40px 80px; }
 .contact-heading p { max-width: 34ch; margin: 24px 0 0; color: var(--muted); }

@@ -3,27 +3,30 @@ import { ArrowUpRight } from 'lucide-vue-next'
 
 const roles = [
   {
-    period: 'Apr 2020 — Jul 2026', company: 'PikarLabs', type: 'Part-time · Remote', role: 'Full-Stack Developer',
+    period: 'Apr 2020 — Jul 2026', location: 'Remote', company: 'PikarLabs', type: 'Freelance', role: 'Full-Stack Developer',
     detail: 'Built and maintained 5+ web applications for clients and internal needs using Craft CMS, Laravel, Vue.js, Tailwind CSS, MySQL, and PostgreSQL, covering backend, frontend, and database.',
     highlights: [
       { label: 'SIMRS', text: 'Built medicine management and patient modules for a Hospital Information System, using the Ministry of Health’s KFA (Kamus Farmasi dan Alat Kesehatan) data.' },
       { label: 'Meducine', text: 'Contributed to an online medical education platform (webinars, courses, memberships) for doctors, built on Craft CMS: webinar listing and detail pages, speaker pages, and a REST API for the webinar list.' },
       { label: 'Petrokimia', text: 'Developed the frontend and Craft CMS backend for the Petrokimia corporate website.' },
       { label: 'Monitoring & analytics', text: 'Integrated web applications with monitoring and analytics tools.' },
+      { label: 'Deployment', text: 'Set up and managed servers and application deployments using Ploi.' },
+      { label: 'Testing & project management', text: 'Performed manual testing, wrote user guides, and managed project tasks using Paymo.' },
     ],
   },
   {
-    period: 'Apr 2023 — Jul 2026', company: 'Telkom University Surabaya', type: 'Full-time intern', role: 'Academic Student Staff',
+    period: 'Apr 2023 — Jul 2026', location: 'Surabaya, East Java', company: 'Telkom University Surabaya', type: 'Part-Time', role: 'Academic Student Staff',
     detail: 'Built web applications and internal tools for academic and administrative services.',
     highlights: [
       { label: 'Student Service Center', text: 'Built a ticketing and complaint management system for student service requests and academic inquiries, used by 2,000+ students (Laravel, Vue.js, Tailwind CSS, MySQL, MongoDB).' },
       { label: 'Academic tools', text: 'Built internal tools to streamline academic scheduling and administrative workflows for academic staff, replacing manual processes.' },
       { label: 'Student queuing', text: 'Contributed to a student queuing application for managing student services.' },
-      { label: 'Learning content', text: 'Assisted in scheduling lecturer video recording sessions to keep learning content production running smoothly.' },
+      { label: 'Server', text: 'Set up and managed a VPS for internal applications, including server configuration and deployment.' },
+      { label: 'Academic operations', text: 'Supported academic operations by scheduling lecturer video recording sessions and serving on academic event committees.' },
     ],
   },
   {
-    period: 'Jun 2025 — Aug 2025', company: 'PT Aptikma Teknologi Indonesia', type: 'Internship', role: 'Web Developer',
+    period: 'Jun 2025 — Aug 2025', location: 'Malang, East Java', company: 'PT Aptikma Teknologi Indonesia', type: 'Intern', role: 'Web Developer',
     detail: 'Worked on the Laravel backends of AI-based products during a web development internship.',
     highlights: [
       { label: 'Backend features', text: 'Implemented and fixed backend features for an AI-based Document Recognition System (OCR) and a CCTV-based People Counting System, including application logic and relational database integration.' },
@@ -40,7 +43,7 @@ const roles = [
       <div class="timeline">
         <article v-for="item in roles" :key="`${item.company}-${item.period}`" v-reveal class="timeline-item">
           <div class="timeline-marker"></div>
-          <div class="timeline-date">{{ item.period }}</div>
+          <div class="timeline-date">{{ item.period }}<br />{{ item.location }}</div>
           <div class="timeline-content">
             <div class="timeline-company">{{ item.company }} <span class="experience-type">• {{ item.type }}</span></div>
             <h3>{{ item.role }}</h3>

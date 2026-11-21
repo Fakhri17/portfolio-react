@@ -6,14 +6,15 @@ const featured = [
   { title: 'Meducine', type: 'Medical education platform', description: 'An online medical education platform for doctors. I worked on the webinar listing and detail pages, speaker pages, and a REST API.', image: '/meducine.png', tags: ['Craft CMS', 'PHP', 'Alpine.js'], url: 'https://meducine.id/' },
   { title: 'Petrokimia Gresik', type: 'Corporate website', description: 'The corporate website of Petrokimia Gresik. I developed the frontend and the Craft CMS backend.', image: '/petro.png', tags: ['Craft CMS', 'PHP'], url: 'https://petrokimia-gresik.com/' },
   { title: 'SIMRS Multimedika', type: 'Hospital information system', description: 'I built the medicine management and patient modules using the Ministry of Health’s KFA data.', image: '/simrs.png', tags: ['Laravel', 'Filament', 'MySQL'], url: 'https://dokteremr.com/' },
-  { title: 'Bisnis Digital', type: 'Study program website', description: 'A study program website for prospective students.', image: '/db.png', tags: ['WordPress', 'PHP'], url: 'https://bdb-sby.telkomuniversity.ac.id/' },
+  { title: 'Bisnis Digital', type: 'Study program website', description: 'A study program website for prospective students.', image: '/db.png', tags: ['Filament PHP', 'Tailwind CSS'], url: 'https://bdb-sby.telkomuniversity.ac.id/' },
   { title: 'Mihwan.id', type: 'Personal blog', description: 'A personal blog built on Craft CMS.', image: '/mihwan.png', tags: ['Craft CMS', 'PHP', 'Alpine.js'], url: 'https://mihwan.id' },
 ]
 const others = [
   // Inactive, hidden for now:
   // { title: 'Coder Web Profile', description: 'Profile website for the UKM CODER student developer community.', tags: ['Laravel', 'Livewire', 'MySQL'], url: 'https://www.coder-telkomsby.com/' },
   // { title: 'Erde Jilbab', description: 'An ecommerce site for modest fashion.', tags: ['Laravel', 'Tailwind CSS'], url: '' },
-  { title: 'PDFLab', description: 'Side project. A PDF toolkit (split, merge, organize, watermark) that runs entirely in the browser.', tags: ['Vue.js'], url: 'https://pdflabs.my.id/' },
+  { title: 'Vote Tenant', description: 'Tenant voting website for the campus Market Day event, updated every semester and for each new event.', tags: ['Vue.js', 'Bootstrap'], url: 'https://vote-tenant-tmd2026.netlify.app/' },
+  { title: 'PDFLab', description: 'Side project. A PDF toolkit (split, merge, organize, watermark) that runs entirely in the browser.', tags: ['Vue.js', 'Tailwind CSS'], url: 'https://pdflabs.my.id/' },
   { title: 'Islamic Website', description: 'Quran reader and prayer schedules.', tags: ['Alpine.js', 'Bootstrap'], url: 'https://islamic-web-telkomsby.netlify.app' },
 ]
 </script>
