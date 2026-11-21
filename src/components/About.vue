@@ -3,9 +3,9 @@ import { BookOpen, GraduationCap, Trophy, Users } from 'lucide-vue-next'
 </script>
 
 <template>
-  <section id="background" class="section about-section">
+  <section id="milestones" class="section about-section">
     <div class="container">
-      <div v-reveal class="section-heading"><h2>Background</h2></div>
+      <div v-reveal class="section-heading"><h2>Milestones</h2></div>
       <div class="about-background">
         <article v-reveal class="background-card">
           <div class="background-card-heading"><GraduationCap :size="21" /><h3>Education</h3></div>

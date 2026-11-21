@@ -11,7 +11,7 @@ const isDark = ref(document.documentElement.classList.contains('dark'))
 const links = [
   { label: 'Work', href: '#projects' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Background', href: '#background' },
+  { label: 'Milestones', href: '#milestones' },
   { label: 'Contact', href: '#contact' },
 ]
 
