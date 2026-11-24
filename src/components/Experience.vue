@@ -39,13 +39,13 @@ const roles = [
 <template>
   <section id="experience" class="section experience-section">
     <div class="container">
-      <div v-reveal class="section-heading"><h2>Work experience</h2></div>
+      <div v-reveal class="section-heading split-heading"><h2>Work experience</h2><p>Six years of freelance, campus, and internship work, from client websites to internal tools and AI product backends.</p></div>
       <div class="timeline">
         <article v-for="item in roles" :key="`${item.company}-${item.period}`" v-reveal class="timeline-item">
           <div class="timeline-marker"></div>
-          <div class="timeline-date">{{ item.period }}<br />{{ item.location }}</div>
+          <div class="timeline-date"><span class="timeline-period">{{ item.period }}</span><br />{{ item.location }}</div>
           <div class="timeline-content">
-            <div class="timeline-company">{{ item.company }} <span class="experience-type">• {{ item.type }}</span></div>
+            <div class="timeline-company">{{ item.company }} <span class="experience-type">{{ item.type }}</span></div>
             <h3>{{ item.role }}</h3>
             <p>{{ item.detail }}</p>
             <ul v-if="item.highlights" class="timeline-highlights">

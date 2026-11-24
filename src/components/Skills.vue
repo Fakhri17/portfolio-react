@@ -1,4 +1,5 @@
 <script setup>
+const core = new Set(['PHP', 'Laravel', 'Craft CMS', 'Vue.js'])
 const groups = [
   { label: 'Backend', items: ['PHP', 'Laravel', 'Symfony', 'Filament PHP', 'Node.js', 'REST API'] },
   { label: 'Frontend', items: ['JavaScript', 'Vue.js', 'Alpine.js', 'jQuery', 'HTML & CSS', 'Tailwind CSS', 'Bootstrap'] },
@@ -6,6 +7,7 @@ const groups = [
   { label: 'Server & deployment', items: ['Linux', 'Nginx', 'Apache', 'Cloudflare'] },
   { label: 'Tools', items: ['Git', 'Postman', 'Figma', 'Visual Studio Code'] },
   { label: 'AI-assisted development', items: ['Claude Code', 'Gemini', 'Codex'] },
+  { label: 'Soft skills', items: ['Mentoring & teaching', 'Public speaking', 'Client communication', 'Remote collaboration'] },
   { label: 'Language', items: ['Indonesian (Advanced)', 'English (Fluent)'] },
 ]
 </script>
@@ -17,7 +19,7 @@ const groups = [
       <dl class="skills-table">
         <div v-for="(group, index) in groups" :key="group.label" v-reveal="index * 50" class="skills-row">
           <dt>{{ group.label }}</dt>
-          <dd><span v-for="item in group.items" :key="item">{{ item }}</span></dd>
+          <dd><span v-for="item in group.items" :key="item" class="skill-chip" :class="{ 'is-core': core.has(item) }">{{ item }}</span></dd>
         </div>
       </dl>
     </div>

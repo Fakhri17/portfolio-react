@@ -35,7 +35,7 @@ const others = [
           </div>
         </article>
       </div>
-      <h3 v-reveal class="projects-subheading">More projects</h3>
+      <h3 v-reveal class="projects-subheading">More projects <span class="projects-count">{{ String(others.length).padStart(2, '0') }}</span></h3>
       <ul class="project-list">
         <li v-for="(project, index) in others" :key="project.title" v-reveal="index * 40">
           <component :is="project.url ? 'a' : 'div'" class="project-row" :href="project.url || undefined" :target="project.url ? '_blank' : undefined" :rel="project.url ? 'noopener noreferrer' : undefined">
