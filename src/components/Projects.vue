@@ -13,10 +13,12 @@ const others = [
   // Inactive, hidden for now:
   // { title: 'Coder Web Profile', description: 'Profile website for the UKM CODER student developer community.', tags: ['Laravel', 'Livewire', 'MySQL'], url: 'https://www.coder-telkomsby.com/' },
   // { title: 'Erde Jilbab', description: 'An ecommerce site for modest fashion.', tags: ['Laravel', 'Tailwind CSS'], url: '' },
-  { title: 'Vote Tenant', description: 'Tenant voting website for the campus Market Day event, updated every semester and for each new event.', tags: ['Vue.js', 'Bootstrap'], url: 'https://vote-tenant-tmd2026.netlify.app/' },
+  { title: 'AnimManga', description: 'An anime and manga catalog with popularity and score rankings, episodes, volumes, genres, and characters.', tags: ['Symfony', 'Tailwind CSS'], url: 'https://staging.animmanga.moe/' },
+  { title: 'Radiotrip', description: 'An internet radio directory for browsing and listening to stations by country, genre, and popularity.', tags: ['Symfony', 'Tailwind CSS', 'Alpine.js'], url: 'https://staging.radiotrip.net/' },
   { title: 'PDFLab', description: 'Side project. A PDF toolkit (split, merge, organize, watermark) that runs entirely in the browser.', tags: ['Vue.js', 'Tailwind CSS'], url: 'https://pdflabs.my.id/' },
   { title: 'itools', description: 'Side project. A collection of free internet tools that run entirely in the browser, with no login needed.', tags: ['Vue.js', 'Tailwind CSS'], url: 'https://itools.web.id/' },
   { title: 'Islamic Website', description: 'Quran reader and prayer schedules.', tags: ['Alpine.js', 'Bootstrap'], url: 'https://islamic-web-telkomsby.netlify.app' },
+  { title: 'Vote Tenant', description: 'Tenant voting website for the campus Market Day event, updated every semester and for each new event.', tags: ['Vue.js', 'Bootstrap'], url: 'https://vote-tenant-tmd2026.netlify.app/' },
 ]
 </script>
 
