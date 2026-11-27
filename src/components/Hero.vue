@@ -45,17 +45,19 @@ onUnmounted(() => {
 <template>
   <section id="home" class="hero-section">
     <div class="container hero-grid">
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> Open to full-time roles · Surabaya, Indonesia</div>
+      <div class="hero-copy hero-head reveal">
+        <div class="eyebrow"><span class="status-dot"></span><span>Open to full-time roles · Surabaya, Indonesia</span></div>
         <h1>Fakhri<br /><span class="hero-surname">Alauddin</span></h1>
         <p class="hero-role">Full-Stack Developer</p>
-        <p class="hero-description">I’m a full-stack developer based in Surabaya and a Computer Science graduate of Telkom University Surabaya. I’ve been building for the web since 2020, mostly with <strong>Craft CMS, Laravel, and Vue.js</strong>, from corporate websites and a medical webinar platform to a student ticketing system used by 2,000+ students.</p>
-        <div class="hero-actions"><a href="#projects" class="button button-primary">View projects <ArrowUpRight :size="17" /></a><a href="/resume-fakhri-alauddin.pdf" download="Resume - CV Fakhri Alauddin.pdf" class="button button-ghost"><Download :size="16" /> Download CV</a><a href="#contact" class="button button-ghost">Contact me</a></div>
       </div>
       <div class="hero-showcase reveal reveal-delay">
         <div class="portrait-frame">
           <img class="hero-portrait" src="/fakhri.png" alt="Portrait of Fakhri Alauddin" width="1024" height="1024" fetchpriority="high" />
         </div>
+      </div>
+      <div class="hero-copy hero-body reveal">
+        <p class="hero-description">I’m a full-stack developer based in Surabaya and a Computer Science graduate of Telkom University Surabaya. I’ve been building for the web since 2020, mostly with <strong>Craft CMS, Laravel, and Vue.js</strong>, from corporate websites and a medical webinar platform to a student ticketing system used by 2,000+ students.</p>
+        <div class="hero-actions"><a href="#projects" class="button button-primary">View projects <ArrowUpRight :size="17" /></a><a href="/resume-fakhri-alauddin.pdf" download="Resume - CV Fakhri Alauddin.pdf" class="button button-ghost"><Download :size="16" /> Download CV</a><a href="#contact" class="button button-ghost">Contact me</a></div>
       </div>
     </div>
     <dl ref="statsEl" class="container hero-stats">

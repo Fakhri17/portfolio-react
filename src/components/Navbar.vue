@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { ArrowUpRight, Menu, Moon, Sun, X } from 'lucide-vue-next'
 
 const isOpen = ref(false)
@@ -36,11 +36,20 @@ const toggleTheme = () => {
   }
 }
 const close = () => { isOpen.value = false }
+const onKeydown = (event) => { if (event.key === 'Escape') close() }
+const desktopQuery = window.matchMedia('(min-width: 901px)')
+const onBreakpointChange = (event) => { if (event.matches) close() }
+
+watch(isOpen, (open) => {
+  document.documentElement.classList.toggle('menu-open', open)
+})
 
 onMounted(() => {
   applyTheme(isDark.value)
   onScroll()
   window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener('keydown', onKeydown)
+  desktopQuery.addEventListener?.('change', onBreakpointChange)
   if (!('IntersectionObserver' in window)) return
   sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -51,6 +60,9 @@ onMounted(() => {
 })
 onUnmounted(() => {
   window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('keydown', onKeydown)
+  desktopQuery.removeEventListener?.('change', onBreakpointChange)
+  document.documentElement.classList.remove('menu-open')
   sectionObserver?.disconnect()
 })
 </script>
@@ -67,6 +79,7 @@ onUnmounted(() => {
       <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="mobile-navigation" :aria-expanded="isOpen" @click="isOpen = !isOpen"><X v-if="isOpen" :size="20" /><Menu v-else :size="20" /></button>
     </nav>
     <div class="scroll-progress" :style="{ transform: `scaleX(${progress})` }" aria-hidden="true"></div>
-    <Transition name="menu"><div v-if="isOpen" id="mobile-navigation" class="mobile-nav container" @keydown.esc="close"><a v-for="link in links" :key="link.href" :href="link.href" class="mobile-link" @click="close">{{ link.label }}</a><a href="#contact" class="mobile-link mobile-link-accent" @click="close">Let's talk <ArrowUpRight :size="16" /></a></div></Transition>
+    <Transition name="menu"><div v-if="isOpen" id="mobile-navigation" class="mobile-nav"><div class="container"><a v-for="link in links" :key="link.href" :href="link.href" class="mobile-link" :class="{ 'is-active': activeHref === link.href }" @click="close">{{ link.label }}</a><a href="#contact" class="mobile-link mobile-link-accent" @click="close">Let's talk <ArrowUpRight :size="16" /></a></div></div></Transition>
   </header>
+  <Transition name="fade"><div v-if="isOpen" class="nav-backdrop" aria-hidden="true" @click="close"></div></Transition>
 </template>
